@@ -17,7 +17,8 @@ public class Player {
         this.point = point;
     }
     public int DiceRoll(){
-        int f = Dice.DiceNumber();
+        int n = (int) (Math.random() * 4) + 1;
+        int f = Dice.DiceNumber(n);
         System.out.printf(" Mặt xúc xắc là: %d", f);
         return f;
     }

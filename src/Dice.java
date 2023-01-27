@@ -20,11 +20,22 @@ public class Dice {
         int indexc = findCeil(prefix, r,0, n - 1);
         return arr[indexc];
     }
-    static int DiceNumber()
+
+    static int[] Freq(int Dice){
+        int freq[] = new int[6];
+        for(int i = 0; i < 6; i++){
+            freq[i] = 4;
+        }
+        freq[Dice] = 5;
+        return freq;
+
+    }
+    static int DiceNumber(int Dice)
     {
         int arr[] = {1, 2, 3, 4, 5, 6};
-        int freq[] = {5, 4, 4, 4, 4, 4};
+
         int i, n = arr.length;
-        return myRand(arr, freq, n);
+
+        return myRand(arr, Freq(Dice), n);
     }
 }
